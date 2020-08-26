@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Coachella</title>
+	<style>
+		html, body {
+			margin: 0;
+			padding: 0;
+		}
+		#header {
+			background-color: #f5dfc0;
+			text-align: center;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		#header h1 {
+			color: blue;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		#about {
+			background-color: pink;
+			/* Make the width of this div equal to both columns */
+			width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#about #column1 {
+			background-color: lightgreen;
+			width: 300px;
+			float: left;
+		}
+		#about #column2 { 
+			background-color: pink;
+			width: 380px;
+			/* You can set heights, but really try not to */
+			/*height: 379px;*/
+			float: left;
+			/* padding makes the width of a div bigger */
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.clearfloat {
+			clear: both;
+		}
+		#artists {
+			background-color: skyblue;
+			width: 900px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#artists .artist-column {
+			background-color: #fef587;
+			/* 1 + 15 + 10 + 248 + 10 + 15 + 1 = 300*/
+			width: 248px;
+			float: left;
+			/* add padding to left,right,top,bottom*/
+			padding: 10px;
+			margin: 15px;
+			/* border also adds to the width of a div */
+			border: 1px solid black;
+		}
+		#artists img {
+			/*width: 300px;*/
+			width: 100%;
+		}
+		#footer {
+			background-color: black;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="header">
+		<h1>Coachella</h1>
+	</div>
+	<div id="about">
+		<div id="column1">
+			<img src="images/coachella.png" alt="pine tree"/>
+		</div>
+		<div id="column2">
+			<p>The Coachella Valley Music and Arts Festival (commonly called Coachella or the Coachella Festival) is an annual music and arts festival held at the Empire Polo Club in Indio, California, in the Coachella Valley in the Colorado Desert. It was co-founded by Paul Tollett and Rick Van Santen in 1999, and is organized by Goldenvoice, a subsidiary of AEG Presents. The event features musical artists from many genres of music, including rock, pop, indie, hip hop and electronic dance music, as well as art installations and sculptures. Across the grounds, several stages continuously host live music.</p>
+		</div>
+		<!-- Stop floating after this column -->
+		<div class="clearfloat"></div>
+	</div>
+
+	<div id="artists">
+		<h2>Artists</h2>
+		<div class="artist-column">
+			<img src="images/ariana.jpg" alt="Ariana Grande"/>
+			<h3>Ariana Grande</h3>
+		</div>
+		<div class="artist-column">
+			<img src="images/ariana.jpg" alt="Ariana Grande"/>
+			<h3>Ariana Grande</h3>
+		</div>
+		<div class="artist-column">
+			<img src="images/ariana.jpg" alt="Ariana Grande"/>
+			<h3>Ariana Grande</h3>
+		</div>
+
+		<!-- Stop the float after the last column in this row -->
+		<div class="clearfloat"></div>
+	</div>
+
+	<div id="footer">
+		Made by Nayeon Kim in ITP 303.
+	</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

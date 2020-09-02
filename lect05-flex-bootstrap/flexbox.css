@@ -1,0 +1,74 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Oswald', sans-serif;
+}
+/* Asterisk (*) means select ALL the elements in this HTML file */
+* {
+	box-sizing: border-box;
+}
+
+/* Colors for each box. */
+.box1 { background-color: #011627; }
+.box2 { background-color: #EB5160; }
+.box3 { background-color: #030301; }
+.box4 { background-color: #00D9C0; }
+.box5 { background-color: #FF0022; }
+
+/* The parent */
+.container {
+	border: 10px solid skyblue;
+	display: flex;
+	height: 400px;
+
+	/* flex direction determines the MAIN AXIS. The opposite of main axis is called CROSS AXIS. */
+	flex-direction: row;
+
+	/* flex wrap: by default flex items will all try to fit onto one line. You can change that with flex wrap */
+	flex-wrap: nowrap;
+
+	/* justify-content: defines alignment along the MAIN AXIS (which dpends on flex-direction) */
+	justify-content: space-between;
+
+	/* align-items: defines alignment along the CROSS AXIS (the opposite direction of main axis) */
+	align-items: baseline;
+}
+.box1 {
+	height: 200px;
+	padding-top: 20px;
+}
+
+.box2 {
+	/* Whichever flex item that has the highester order value will be displayed last. By default all flex items have the order: 0 */
+	order: 1;
+}
+.box3 {
+	order: 999999;
+}
+
+/* .container's direct children */
+.box {
+	color: white;
+	font-size: 28px;
+
+	/* By default, all flex items (children) are squished if needed to fit in the same row. It will ignore the width property to fit in one row. */
+	width: 100px;
+	/*margin: 10px;*/
+
+	/* The float way to make divs go left to right*/
+	/*float: left;
+	width: 100px;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

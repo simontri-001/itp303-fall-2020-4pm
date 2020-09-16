@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Objects</title>
+	<style>
+		#people {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<h1>People</h1>
+	<div id="people">
+	</div>
+
+<script>
+
+	// Two ways to create an object in JS
+	// 1. Literal Syntax
+	let person = {
+		name: "Tommy Trojan",
+		age: 21,
+		hobbies: ["standing", "taking photos", "guarding USC"],
+		phone: {
+			cell: "123-123-1234",
+			work: "555-555-5555"
+		},
+		greet: function() {
+			console.log("Hi!!!" + this.name);
+		}
+	};
+
+	console.log(person);
+	console.log(person.name);
+	console.log(person.age);
+	console.log(person.hobbies[0]);
+	console.log(person.phone.cell);
+	person.greet();
+	person.age = 11;
+	console.log(person.age);
+
+	let person2 = {
+		name: "Traveler",
+		age: 55
+	}
+
+	console.log(person2.name);
+
+
+	// 2. Constructor Function syntax
+	// This is the "class" where you define the skeletal structure of the objects
+	function Person (fullName, age) {
+		this.name = fullName;
+		this.age = age;
+		this.school = "usc";
+		this.greet = function() {
+			console.log("hi")
+		}
+	}
+
+	// Now you can create instances of the "class"
+	let joe = new Person("Joe Smith", 24);
+	let jimmy = new Person("Jimmy Kimmel", 40);
+
+	console.log(joe);
+	console.log(joe.name);
+	console.log(joe.age);
+	console.log(jimmy.name);
+
+	jimmy.age = 50;
+	console.log(jimmy.age);
+	console.log(jimmy.school);
+
+
+	// When working with a lot of objects, we can store them in an array
+
+	let peopleList = [];
+
+	peopleList.push(joe, jimmy, person, person2);
+
+	console.log(peopleList);
+
+
+	// Display all the people in the peopleList
+	for( let i = 0; i < peopleList.length; i++) {
+
+		let pElement = document.createElement("p");
+		pElement.innerHTML = peopleList[i].name +  " - " + peopleList[i].age;
+
+		// Append this to the <div id="people">
+		document.querySelector("#people").appendChild(pElement);
+	}
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
